@@ -27,6 +27,10 @@ _SYSCALL __sys_fstat, SYS_FSTAT, 2
 _SYSCALL __sys_lstat, SYS_LSTAT, 2
 _SYSCALL __sys_poll,  SYS_POLL,  3
 _SYSCALL __sys_lseek, SYS_LSEEK, 3
+_SYSCALL __sys_mmap, SYS_MMAP, 6
+_SYSCALL __sys_mprotect, SYS_MPROTECT, 3
+_SYSCALL __sys_munmap, SYS_MUNMAP, 2
+_SYSCALL __sys_brk, SYS_BRK, 1
 
 global __sys_exit
 __sys_exit:

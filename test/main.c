@@ -1,8 +1,11 @@
+#include "malloc.h"
 #include "stdio.h"
 #include <string.h>
 
 int main(){
-    char s[]="hello world!\n";
-    print_string(memrchr(s, 'o', 12));
+    char *s = malloc(7);
+    strcpy(s, "hello\n");
+    print_string(s);
+    free(s);
     return 0;
 }
