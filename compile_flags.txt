@@ -1,0 +1,12 @@
+-Iheader
+-MMD
+-MP
+-ffreestanding
+-fno-builtin
+-Wall
+-Wextra
+-O2
+-mno-red-zone
+-g
+-mno-sse
+-mstack-protector-guard=global
