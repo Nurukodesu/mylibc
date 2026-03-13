@@ -4,7 +4,7 @@ SRC = src
 INC := header
 BUILD := build
 TEST := test
-COMMON_SRC := src/string src/unistd src/errno src/stdio src/debug
+COMMON_SRC := src/string src/unistd src/errno src/stdio src/debug src/malloc
 ARCH_INC := $(INC)/arch/$(ARCH)/
 ARCH_SRC := $(SRC)/arch/$(ARCH)/
 

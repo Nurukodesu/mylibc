@@ -1,5 +1,8 @@
 #pragma  once
 
+#define SIZE_MAX __SIZE_MAX__
+
+
 typedef unsigned long      uint64_t;
 typedef unsigned long      uintptr_t;
 

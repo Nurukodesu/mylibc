@@ -1,9 +1,9 @@
-#include "malloc.h"
-#include "stdio.h"
+#include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 
 int main(){
-    char *s = malloc(7);
+    char *s = calloc(1, 7);
     strcpy(s, "hello\n");
     print_string(s);
     free(s);
