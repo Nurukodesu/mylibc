@@ -1,5 +1,5 @@
 #include <ctype.h>
 
-int tolower(int c){
+int toupper(int c){
 	return c^(((unsigned)(c - 'a') < 26)<<5);
 }

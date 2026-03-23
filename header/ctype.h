@@ -16,6 +16,9 @@ extern int isspace(int c);
 extern int isupper(int c);
 extern int isxdigit(int c);
 
+extern int tolower(int c);
+extern int toupper(int c);
+
 #ifdef _EXTENDED
 extern char *itoa(int n, char *buf_end);
 #endif
