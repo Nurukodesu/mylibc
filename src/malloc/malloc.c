@@ -1,14 +1,14 @@
 #include "unistd.h"
 #include "internal.h"
 
-struct block_header *heap_start = NULL;
-struct block_header *heap_end = NULL;
+block_header *heap_start = NULL;
+block_header *heap_end = NULL;
 
-static struct block_header *request_data(size_t size) {
-  void *p = sbrk(size + sizeof(struct block_header));
+static block_header *request_data(size_t size) {
+  void *p = sbrk(size + sizeof(block_header));
   if (p == (void *)-1)
     return NULL;
-  struct block_header *block = (struct block_header *)p;
+  block_header *block = (block_header *)p;
   block->size = size;
   block->is_free = 0;
   block->next = NULL;
@@ -20,7 +20,7 @@ void *malloc(size_t size) {
   if (!size)
     return NULL;
   size_t aligend_size = ALIGN(size);
-  struct block_header *block;
+  block_header *block;
   if (heap_start == NULL) {
     block = request_data(aligend_size);
     if (!block)

@@ -7,11 +7,11 @@ void *realloc(void *ptr, size_t size) {
 		free(ptr);
 		return NULL;
 	}
-	struct block_header *block = (struct block_header *)ptr - 1;
+	block_header *block = (block_header *)ptr - 1;
 	size_t aligned_size = ALIGN(size);
 	if (block->size >= aligned_size) return ptr;
 	size_t total_available =
-		(block->size + sizeof(struct block_header) + block->next->size);
+		(block->size + sizeof(block_header) + block->next->size);
 	if (block->next && block->next->is_free &&
 		total_available >= aligned_size) {
 		merge_forward(block);

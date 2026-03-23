@@ -3,12 +3,6 @@
 %macro _SYSCALL 2-3
     global %1
     %1:
-        %if %3 >= 6
-            mov r9, [rsp + 16] 
-        %endif
-        %if %3 >= 5
-            mov r8, [rsp + 8]  
-        %endif
         %if %3 >= 4
             mov r10, rcx       
         %endif

@@ -1,11 +1,9 @@
-#include <stdlib.h>
+#include <ctype.h>
 #include <stdio.h>
-#include <string.h>
 
 int main(){
-    char *s = calloc(1, 7);
-    strcpy(s, "hello\n");
-    print_string(s);
-    free(s);
-    return 0;
+	char buf[12];
+    print_string(itoa(-1234, buf+12));
+	print_string("\n");
+	return 0;
 }

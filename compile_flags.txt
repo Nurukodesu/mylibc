@@ -10,3 +10,4 @@
 -g
 -mno-sse
 -mstack-protector-guard=global
+-D _EXTENDED
