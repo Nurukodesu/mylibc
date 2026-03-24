@@ -1,4 +1,5 @@
 #include <stddef.h>
+#include <stdint.h>
 
 typedef struct {
   int quot;
@@ -15,17 +16,24 @@ typedef struct {
   long long rem;
 } lldiv_t;
 
-int atoi(const char *nptr);
-long atol(const char *nptr);
-long long atoll(const char *nptr);
+typedef struct {
+	intmax_t quot;
+	intmax_t rem;
+} imaxdiv_t;
 
-int abs(int n);
-long labs(long n);
-long long llabs(long long n);
+extern int atoi(const char *nptr);
+extern long atol(const char *nptr);
+extern long long atoll(const char *nptr);
 
-div_t div(int num, int den);
-ldiv_t ldiv(long num, long den);
-lldiv_t lldiv(long long num, long long den);
+extern int abs(int n);
+extern long labs(long n);
+extern long long llabs(long long n);
+extern intmax_t imaxabs(intmax_t n);
+
+extern div_t div(int num, int den);
+extern ldiv_t ldiv(long num, long den);
+extern lldiv_t lldiv(long long num, long long den);
+extern imaxdiv_t imaxdiv(intmax_t num, intmax_t den);
 
 void *bsearch(const void *target, const void *base, size_t n, size_t size, int (const void * key, const void* ele));
 
