@@ -36,6 +36,13 @@ extern int fputc(int c, FILE *f);
 extern size_t fwrite(const void *ptr, size_t size, size_t n, FILE *restrict f);
 
 extern int printf(const char *fmt, ...);
+extern int fprintf(FILE *f, const char *fmt, ...);
+extern int dprintf(int fd, const char *fmt, ...);
+extern int vprintf(const char *fmt, va_list ap);
+extern int vdprintf(int fd, const char *fmt, va_list ap);
 extern int vfprintf(FILE *f, const char *restrict fmt, va_list ap);
+
+extern int snprintf(char *restrict s, size_t n, const char *fmt, ...);
+extern int vsnprintf(char *restrict s, size_t n, const char *fmt, va_list ap);
 
 extern int print_string(const char *buf);

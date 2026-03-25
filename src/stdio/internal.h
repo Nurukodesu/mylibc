@@ -1,3 +1,4 @@
+#include <stddef.h>
 #include <stdio.h>
 
 #define _IO_READ    0x0001  // Stream is open for reading
@@ -10,3 +11,5 @@
 #define BUFSIZE 4096
 
 extern int __overflow (FILE *f, int c);
+extern size_t __file_write(FILE *f, const unsigned char *s, size_t l);
+extern size_t __string_write(FILE *f, const unsigned char* s, size_t l);

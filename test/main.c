@@ -1,6 +1,6 @@
 #include <stdio.h>
 
 int main(){
-	printf("%s %d nuru was here\n", "hello", 67);
+	dprintf(1, "%s\n", "hello");
 	return 0;
 }
