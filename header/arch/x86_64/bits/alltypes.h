@@ -1,4 +1,10 @@
-#pragma once
+#ifdef _SYS_TYPES_H
+
+typedef unsigned int __mode_t ;
+
+#endif
+
+#ifdef _STDINT_H
 
 typedef long __intmax_t;
 typedef unsigned long __uintmax_t;
@@ -15,3 +21,5 @@ typedef long __int64_t;
 typedef int __int32_t;
 typedef short __int16_t;
 typedef signed char __int8_t;
+
+#endif

@@ -30,7 +30,7 @@ $(LIB_NAME): $(OBJS)
 
 $(BUILD)/main: $(TEST)/main.c $(LIB_NAME)
 	@mkdir -p $(dir $@)
-	$(CC) @compile_flags.txt $(CFLAGS) $< $(LIB_NAME) -o $@	
+	$(CC) @compile_flags.txt $(CFLAGS) $(LDFLAGS) $< $(LIB_NAME) -o $@	
 
 $(BUILD)/%.o: $(SRC)/%.asm
 	@mkdir -p $(dir $@)

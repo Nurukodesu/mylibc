@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _STDINT_H
+#define _STDINT_H
 
 #include <bits/alltypes.h>
 #define SIZE_MAX __SIZE_MAX__
@@ -18,3 +19,5 @@ typedef __int64_t int64_t;
 typedef __int32_t int32_t;
 typedef __int16_t int16_t;
 typedef __int8_t int8_t;
+
+#endif

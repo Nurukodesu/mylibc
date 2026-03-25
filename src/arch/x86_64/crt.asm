@@ -1,6 +1,8 @@
 .text:
     global _start
     extern main
+	extern fflush
+	extern stdout
 _start:
     xor rbp, rbp
     mov rdi, [rsp]
@@ -10,6 +12,8 @@ _start:
     and rsp, -16
     sub rsp, 8
     call main
+	mov rdi, [stdout]
+	call fflush
     mov rdi, rax
     mov rax, 60
     syscall
