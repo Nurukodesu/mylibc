@@ -3,4 +3,5 @@ build/
 *.a
 *.elf
 .vscode
+.cache
 compile_commands.json
